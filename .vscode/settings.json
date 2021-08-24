@@ -1,0 +1,25 @@
+{
+  // ===========================================
+  // ================ Eslint ===================
+  // ===========================================
+  "eslint.alwaysShowStatus": true,
+  "eslint.options": {
+    "plugins": ["html", "vue", "javascript", "jsx", "typescript"],
+    "extensions": [".js", ".jsx", ".ts", ".tsx", ".vue"]
+  },
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "reacttypescript",
+    "reactjavascript",
+    "html",
+    "vue"
+  ],
+
+  // "files.autoSave": "onFocusChange",
+  "prettier.trailingComma": "all",
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": false
+}
