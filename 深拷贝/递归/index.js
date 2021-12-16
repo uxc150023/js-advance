@@ -1,14 +1,16 @@
-function deepCopy(obj) {
-  if (obj.typeof !== 'object') {
-    return;
-  }
-
-  let newObj = obj instanceof Array ? [] : {};
-  for (const key in object) {
-    if (Object.hasOwnProperty.call(object, key)) {
-      // const element = object[key];
-
+function clone(target) {
+  if (typeof target === "object") {
+    let cloneTarget = Array.isArray(target) ? [] : {};
+    for (let key in target) {
+      cloneTarget[key] = clone(target[key]);
     }
+    return cloneTarget;
+  } else {
+    return target;
   }
-  return newObj;
 }
+
+let obj = { a: { b: [1, 2, 3, 4] } };
+let copy = clone(obj);
+// copy.a.b[0] = 2;
+console.log(copy);
