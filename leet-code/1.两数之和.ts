@@ -6,7 +6,7 @@
 
 // @lc code=start
 function twoSum(nums: number[], target: number): number[] {
-
-};
+  type Value<T> = T;
+  type NumberValue = Value<number>;
+}
 // @lc code=end
-
