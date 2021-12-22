@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id="input" />
+  <script>
+    let num = 0;
+    // function fangdou(fun, time) {
+    //   let timer = null;
+    //   return () => {
+    //     if (timer) {
+    //       clearTimeout(timer);
+    //       timer = setTimeout(() => {
+    //         fun();
+    //       }, time);
+    //     } else {
+    //       timer = setTimeout(() => {
+    //         fun();
+    //         clearTimeout(timer);
+    //       }, time);
+    //     }
+    //   };
+    // }
+    // let inputFun = fangdou(() => { console.log(num++); }, 1000);
+    document.getElementById("input").addEventListener("input", inputFun)
+  </script>
+</body>
+
+</html>
