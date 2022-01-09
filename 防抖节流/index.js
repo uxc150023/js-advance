@@ -27,13 +27,14 @@ function throttle(fun, delay) {
   let _lastTime = +new Date();
   return () => {
     let _nowTime = +new Date();
-    if (_lastTime - _nowTime >= delay) {
-      _lastTime = _nowTime;
-      fun();
-    } else {
+    if (_nowTime - _lastTime < delay) {
+      clearTimeout(time1);
       time1 = setTimeout(() => {
         fun();
       }, delay);
+    } else {
+      _lastTime = _nowTime;
+      fun();
     }
   };
 }
