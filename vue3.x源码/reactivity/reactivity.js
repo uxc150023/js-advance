@@ -24,6 +24,7 @@ class Dep {
       this.effects.add(currentEffect);
     }
   }
+
   // 2.触发依赖
   notice() {
     // 触发一下我们之前收集到的依赖
