@@ -1,26 +1,4 @@
-const arr = [
-  { id: 1, pid: 0 },
-  { id: 2, pid: 1 },
-  { id: 3, pid: 2 },
-  { id: 4, pid: 3 },
-];
-
-const tree = [
-  {
-    id: 1,
-    pid: 0,
-    children: [
-      {
-        id: 2,
-        pid: 1,
-      },
-    ],
-  },
-];
-
-function toTree(arr, index) {
-  // if(arr[index]){
-  // }else{
-  //   return arr
-  // }
-}
+const arr1 = [1, 2, 3, 4, 5, 6];
+const arr2 = [1, 2, 3, 4, 5, 6, 7, 8];
+arr1.splice(arr2.length);
+console.log("--->", arr1);

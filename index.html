@@ -1,42 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style type="text/css">
-    #dom-id {
-      width: 100px;
-      height: 100px;
-      background-color: red;
-      transform: translateX(0);
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hello Vue3.0</title>
+  <style>
+    body,
+    #app {
+      text-align: center;
+      padding: 30px;
     }
   </style>
 </head>
 
 <body>
-  <div id="dom-id"></div>
-  <button id="btn">button</button>
+  <div id='app'></div>
 </body>
-<script>
-  function debounce(fn, delay) {
-    let timer = null;
-    return function () {
-      clearTimeout(timer);
-      timer = setTimeout(() => {
-        fn()
-      }, delay);
-    };
-  }
+<script type="module">
+  import { createApp } from '../mini-vue3/my-packages/createApp.js'
+  import { reactive } from "../mini-vue3/reactivity/reactive.js"
+  import { h } from "../mini-vue3/my-packages/h.js"
 
-  let dom = document.getElementById("btn");
-  function log(a) {
-    console.log(a);
-  }
-  dom.addEventListener('click', debounce(log, 2000))
+  const App = {
+    render(context) {
+      // const div = document.createElement('div');
+      // div.innerText = context.state.count;
+      // return div;
+      // return h('div', { id: 'app - id', class: 'show-tim' }, context.state.count + '')
+      return h('div', { id: 'app - ' + state.count, class: 'show-tim' }, [h('div', { id: 'app - id', class: 'show-tim' }, 'xxx'), h('div', { id: 'app - id', class: 'show-tim' }, 'yyy')])
+    },
+    setup() {
+      const state = reactive({
+        count: 0,
+      })
+      window.state = state;
+      return { state };
+    }
+  };
 
+  let app = createApp(App)
+  app.mount(document.querySelector('#app'));
 </script>
 
 </html>
