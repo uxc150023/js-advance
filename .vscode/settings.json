@@ -21,5 +21,6 @@
   "editor.detectIndentation": false,
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
-  "prettier.singleQuote": false
+  "prettier.singleQuote": false,
+  "liveServer.settings.port": 5501
 }
