@@ -1,1 +1,2 @@
-i
+
+    if (this.status === MyPromise.R

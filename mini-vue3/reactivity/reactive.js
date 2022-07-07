@@ -70,7 +70,11 @@ export function effectWatch(effect) {
 }
 
 const user = reactive({
-  age: 19,
+  age: {
+    a: {
+      b: 1,
+    },
+  },
 });
 
 let b;
@@ -78,5 +82,5 @@ effectWatch(() => {
   b = user.age;
 });
 
-user.age++;
+user.age.a.b++;
 console.log("--->", b);

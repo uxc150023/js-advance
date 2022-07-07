@@ -1,8 +1,19 @@
-let obj = {
-  a: null,
-  b: function () {},
-  c: undefined,
-  d: [1, 2, 3],
-};
-let objjj = JSON.parse(JSON.stringify(obj));
-console.log("--->", objjj);
+function p1() {
+  return new Promise((resolve, reject) => {
+    resolve(1);
+  });
+}
+function p2() {
+  return new Promise((resolve, reject) => {
+    resolve(2);
+  });
+}
+
+p1()
+  .finally(p2)
+  .then((value) => {
+    console.log("--->", value);
+  })
+  .then((value) => {
+    console.log("--->", value);
+  });

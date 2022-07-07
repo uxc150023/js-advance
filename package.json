@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/uxc150023/js-advance/issues"
   },
-  "homepage": "https://github.com/uxc150023/js-advance#readme"
+  "homepage": "https://github.com/uxc150023/js-advance#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }

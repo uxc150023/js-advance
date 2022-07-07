@@ -1,8 +1,3 @@
-export const obj = {
-  a: 1,
-};
-export let b = 0;
-setTimeout(() => {
-  obj.a++;
-  b++;
-}, 1000);
+let obj1 = require("./index");
+obj1.name = "cyy";
+console.log("--->", module);
